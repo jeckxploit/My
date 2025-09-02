@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "name": "Jeck",
+    "tagline": "Cyber Security",
+    "location": "Indonesia",
+    "profileImage": "Aku.jpg",
+    "themeColor": "#8b5cf6"
+  },
+  "skills": ["Cyber Security", "Penetration testing"],
+  "socialLinks": [
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/jeckxploit",
+      "icon": "github",
+      "tooltip": "GitHub"
+    },
+    {
+      "platform": "Email",
+      "url": "ndaf53396@gmail.com",
+      "icon": "email",
+      "tooltip": "Email"
+    }
+  ],
+  "footer": {
+    "text": "Made by Jeck",
+    "url": "https://github.com/jeckxploit",
+    "showHeart": true
+  },
+  "animations": {
+    "enableHover3D": true,
+    "enableRippleEffect": true,
+    "enableParallax": true
+  },
+  "customization": {
+    "cardWidth": "430px",
+    "cardBorderRadius": "24px",
+    "glowIntensity": "20px",
+    "backgroundType": "solid",
+    "backgroundColor": "#000000"
+  }
+}

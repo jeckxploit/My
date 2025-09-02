@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>My Portfolio</title>
+    <meta
+      name="description"
+      content="Student Security (Jeck) - Mahasiswa Teknik Informatika Universitas Muhammadiyah Ponorogo. View my projects and experience."
+    />
+    <meta
+      name="keywords"
+      content="Jeck, Cyber Security, Penetration testing, Python Developer, Machine Learning, Universitas Muhammadiyah Ponorogo, Portfolio, Web Development, Cyber Security"
+    />
+    <meta name="author" content="Student Security" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <meta property="og:title" content="Jeck Portfolio | Student Security" />
+    <meta
+      property="og:description"
+      content="Mahasiswa Teknik Informatika yang memiliki minat besar dalam bidang Cyber Security. Antusias dalam mempelajari keamanan sistem dan jaringan, serta berkomitmen untuk menciptakan solusi yang aman dan andal di dunia digital. Cek proyek dan pengalaman saya di bidang keamanan informasi dan pengembangan sistem."
+    />
+    <meta property="og:image" content="Aku.jpg" />
+    <meta property="og:url" content="https://instagram.com/emkhall_" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Jeck Portfolio" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jeck Portfolio | Student Security" />
+    <meta
+      name="twitter:description"
+      content="Computer Science student passionate about Cyber Security and building secure, reliable systems. Check out my projects and experience in information security and system protection."
+    />
+    <meta name="twitter:image" content="Aku.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://instagram.com/emkhall_" />
+
+    <!-- Favicon and Icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/ele/logo_variations/fav_icon.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/ele/logo_variations/fav_icon.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/ele/logo_variations/fav_icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/ele/logo_variations/web_icon.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Student Security",
+        "alternateName": "Jeck",
+        "description": "Mahasiswa Teknik Informatika yang memiliki minat besar dalam bidang Cyber Security. Antusias dalam mempelajari keamanan sistem dan jaringan, serta berkomitmen untuk menciptakan solusi yang aman dan andal di dunia digital. Cek proyek dan pengalaman saya di bidang keamanan informasi dan pengembangan sistem.",
+        "jobTitle": "Cyber Security Student & Penetration testing",
+        "url": "https://instagram.com/emkhall_",
+        "image": "Aku.jpg",
+        "sameAs": [
+          "https://github.com/Jeckxploit",
+          "https://www.instagram.com/emkhall_"
+        ],
+        "alumniOf": {
+          "name": "Universitas Muhammadiyah Ponorogo"
+        },
+        "knowsAbout": [
+          "Python Programming",
+          "JavaScript Development",
+          "Machine Learning",
+          "Web Development",
+          "C/C++ Programming",
+          "Database Management",
+          "Git Version Control"
+        ],
+        "email": "kholidazaki@gmail.com",
+        "address": {
+          "addressLocality": "Surodikraman",
+          "addressRegion": "Ponorogo",
+          "addressCountry": "Indonesia"
+        }
+      }
+    </script>
+
+    <!-- Stylesheets and Fonts -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ------------------------------------------------------------------------------- -->
+    <style>
+      /* Certificate Section */
+      #certificate {
+        padding: 60px 20px;
+        background: #111; /* sama seperti tema lain */
+        color: white;
+        text-align: center;
+      }
+
+      #certificate .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      .filter-buttons {
+        margin-bottom: 20px;
+      }
+
+      .filter-btn {
+        background: #1a1a1a;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        margin: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: #6366f1;
+      }
+
+      .certificate-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .certificate-card {
+        background: #1c1c1c;
+        padding: 15px;
+        border-radius: 12px;
+        width: 280px;
+        transition: transform 0.3s ease;
+      }
+
+      .certificate-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .certificate-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      /* Modal Background */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        padding-top: 60px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      /* Image di dalam modal */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 900px;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+      }
+
+      /* Tombol close (X) */
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .close:hover {
+        color: red;
+      }
+    </style>
+    <!-- ------------------------------------------------------------------------------- -->
+  </head>
+  <body>
+    <!-- Modal Zoom -->
+    <div
+      id="imgModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalImage"
+    >
+      <span class="close" tabindex="0" aria-label="Close Modal">&times;</span>
+      <img class="modal-content" id="modalImage" alt="Zoomed certificate" />
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <img src="Logoku.png" alt="Logo" class="loading-logo-img" />
+          <div class="loading-logo-glow"></div>
+        </div>
+        <div class="loading-text">
+          <h1 class="loading-title">
+            <span class="loading-word">Welcome</span>
+            <span class="loading-word">to</span>
+            <span class="loading-word">my</span>
+            <span class="loading-word">portfolio.</span>
+          </h1>
+        </div>
+      </div>
+      <div class="loading-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="Logoku.png" alt="Logo" class="logo-img" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#certificate" class="nav-link">Certificate</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a
+            href="https://github.com/Jeckxploit/My"
+            class="github-repo-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit GitHub Repository"
+          >
+            <!-- <i class="fab fa-link"></i> -->
+            <span>Visit Repo</span>
+            <!-- <i class="fa-solid fa-arrow-up-right-from-square"></i> -->
+            <i class="fa-solid fa-square-arrow-up-right"></i>
+            <!-- <i class="fa-light fa-square-arrow-up-right"></i> -->
+          </a>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="mobile-menu-toggle"
+            id="mobileMenuToggle"
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="hero-grid"></div>
+        <div class="floating-elements">
+          <div class="floating-card parallax-medium" data-speed="2">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="floating-card parallax-slow" data-speed="2.5">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <div class="floating-card parallax-medium" data-speed="1.5">
+            <i class="fab fa-js-square"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Kholid Azaki</span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="typing-text">Cyber Security Student</span>
+            <span class="cursor">|</span>
+          </p>
+          <p class="hero-description">
+            Computer Science student passionate about creating innovative
+            solutions and exploring the frontiers of cyber security.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://github.com/Jeckxploit"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              <span>GitHub Profile</span>
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="error.html" class="btn btn-secondary" target="_blank">
+              <span>Resume</span>
+              <i class="fa-solid fa-file-lines"></i>
+            </a>
+            <!-- Kalau ikon kartu Nexus mau pakai, bungkus dalam elemen terpisah -->
+            <span class="nexus-card-icon"><i class="fas fa-id-card"></i></span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img
+              src="Aku.jpg"
+              alt="Kholid Azaki - Cyber Security"
+              class="profile-image"
+              data-theme-image="true"
+            />
+            <div class="image-glow"></div>
+          </div>
+          <div class="status-badge">
+            <div class="status-indicator"></div>
+            <span>Active account</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Securing the Digital World</h2>
+        </div>
+
+        <div class="bento-grid">
+          <div
+            class="bento-card large scroll-reveal-left scroll-stagger-1 glow-border"
+          >
+            <div class="card-content">
+              <h3>My Journey</h3>
+              <p>
+                Starting from the first semester out of curiosity, he is now
+                studying Information Engineering at Muhammadiyah University,
+                Ponorogo. Starting from a simple console application, his
+                interest evolved into a strong interest in cybersecurity and a
+                commitment to protecting digital systems.
+              </p>
+              <div class="journey-stats">
+                <div class="stat scroll-reveal-scale scroll-stagger-4">
+                  <span class="stat-label">Kholid Azaki</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-card scroll-reveal-right scroll-stagger-2">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Education</h3>
+              <p>
+                Mahasiswa Teknik Informatika<br />Universitas Muhammadiyah
+                Ponorogo
+              </p>
+              <!-- <p>2nd Year Computer Science Student<br>Toronto Metropolitan University</p> -->
+              <span class="card-meta">2024 - Present</span>
+            </div>
+          </div>
+
+          <div class="bento-card scroll-reveal-right scroll-stagger-3">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Passion</h3>
+              <p>
+                Exploring new coding challenges, contributing to open source,
+                and building secure systems.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bento-card wide scroll-reveal scroll-stagger-4 glow-border"
+          >
+            <div class="card-content">
+              <h3>Tech Stack</h3>
+              <div class="tech-badges">
+                <div
+                  class="tech-badge html scroll-reveal-scale scroll-stagger-1"
+                >
+                  <i class="fab fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div
+                  class="tech-badge css scroll-reveal-scale scroll-stagger-2"
+                >
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div
+                  class="tech-badge javascript scroll-reveal-scale scroll-stagger-3"
+                >
+                  <i class="fab fa-js-square"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div
+                  class="tech-badge python scroll-reveal-scale scroll-stagger-4"
+                >
+                  <i class="fab fa-python"></i>
+                  <span>Python</span>
+                </div>
+                <div
+                  class="tech-badge cpp scroll-reveal-scale scroll-stagger-6"
+                >
+                  <i class="fas fa-code"></i>
+                  <span>C++</span>
+                </div>
+                <div
+                  class="tech-badge bootstrap scroll-reveal-scale scroll-stagger-2"
+                >
+                  <i class="fab fa-bootstrap"></i>
+                  <span>Bootstrap</span>
+                </div>
+                <div
+                  class="tech-badge github scroll-reveal-scale scroll-stagger-4"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </div>
+                <div
+                  class="tech-badge mysql scroll-reveal-scale scroll-stagger-5"
+                >
+                  <i class="fas fa-database"></i>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Certificate Section -->
+    <section id="certificate" class="section">
+      <div class="container">
+        <h2 class="section-title">My Certificates</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="test">Test</button>
+          <button class="filter-btn" data-filter="university">
+            University
+          </button>
+          <button class="filter-btn" data-filter="participant">
+            Participant
+          </button>
+        </div>
+
+        <div class="certificate-grid">
+          <div class="certificate-card" data-category="participant">
+            <img src="img/1.jpg" alt="Certificate 1" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/2.jpg" alt="Certificate 2" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/3.jpg" alt="Certificate 3" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/4.jpeg" alt="Certificate 4" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/5.jpg" alt="Certificate 5" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="university">
+            <img src="img/6.jpg" alt="Certificate 6" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/7.jpg" alt="Certificate 7" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img src="img/8.jpg" alt="Certificate 8" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/9.jpeg" alt="Certificate 9" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img src="img/10.jpg" alt="Certificate 10" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img src="img/11.jpg" alt="Certificate 11" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="university">
+            <img src="img/12.png" alt="Certificate 12" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img src="img/13.png" alt="Certificate 13" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img src="img/14.png" alt="Certificate 14" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="university">
+            <img src="img/15.jpg" alt="Certificate 15" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/16.jpeg" alt="Certificate 16" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="test">
+            <img src="img/18.jpeg" alt="Certificate 17" loading="lazy" />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (1).jpg"
+              alt="Certificate 18"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (1).png"
+              alt="Certificate 19"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (2).jpg"
+              alt="Certificate 20"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (3).jpg"
+              alt="Certificate 21"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (5).jpg"
+              alt="Certificate 22"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (6).jpg"
+              alt="Certificate 23"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (7).jpg"
+              alt="Certificate 24"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (8).jpg"
+              alt="Certificate 25"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (9).jpg"
+              alt="Certificate 26"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (12).jpg"
+              alt="Certificate 27"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (14).jpg"
+              alt="Certificate 28"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (15).jpg"
+              alt="Certificate 29"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (16).jpg"
+              alt="Certificate 30"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="university">
+            <img
+              src="img/Agustus_2025 (17).jpg"
+              alt="Certificate 31"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (19).jpg"
+              alt="Certificate 32"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (20).jpg"
+              alt="Certificate 33"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="university">
+            <img
+              src="img/Agustus_2025 (21).jpg"
+              alt="Certificate 34"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="certificate-card" data-category="participant">
+            <img
+              src="img/Agustus_2025 (22).jpg"
+              alt="Certificate 35"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Build Something Amazing Together</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card scroll-reveal-left scroll-stagger-1">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+              <p>kholidazaki@gmail.com</p>
+              <a href="mailto:ndaf53396@gmail.com" class="contact-link"
+                >Send Message</a
+              >
+            </div>
+
+            <div class="contact-card scroll-reveal-left scroll-stagger-3">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <h3>GitHub</h3>
+              <p>Check out my repositories</p>
+              <a
+                href="https://github.com/Jeckxploit"
+                target="_blank"
+                class="contact-link"
+                >Follow</a
+              >
+            </div>
+          </div>
+
+          <form
+            class="contact-form scroll-reveal-right scroll-stagger-2 glow-border"
+            id="contactForm"
+            name="portfolio-contact"
+            method="POST"
+            data-netlify="true"
+            action="/thank-you"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="portfolio-contact" />
+            <!-- Honeypot field for spam protection -->
+            <div style="display: none">
+              <input name="bot-field" />
+            </div>
+            <div class="form-group scroll-reveal scroll-stagger-3">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group scroll-reveal scroll-stagger-4">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group scroll-reveal scroll-stagger-5">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group scroll-reveal scroll-stagger-6">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary scroll-reveal-scale scroll-stagger-6"
+            >
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <img src="Logoku.png" alt="Logo" class="logo-img" />
+            </div>
+            <!-- <p>Building the future, one line of code at a time.</p> -->
+            <p style="font-style: italic">
+              Perfection isn't the goal. Precision is.
+            </p>
+          </div>
+          <div class="footer-right">
+            <div class="social-links">
+              <a
+                href="https://github.com/Jeckxploit"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:ndaf53396@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/emkhall_"
+                target="_blank"
+                aria-label="instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="Jeck Card">
+                <i class="fas fa-id-card"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Jeck. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- ----------------------------------------------------------------------------- -->
+    <script>
+      // Certificate filter script
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const certificates = document.querySelectorAll(".certificate-card");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelector(".filter-btn.active")
+            .classList.remove("active");
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          certificates.forEach((card) => {
+            if (
+              filter === "all" ||
+              card.getAttribute("data-category") === filter
+            ) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Ambil modal
+      var modal = document.getElementById("imgModal");
+      var modalImg = document.getElementById("modalImage");
+      var closeBtn = document.getElementsByClassName("close")[0];
+
+      // Semua gambar sertifikat
+      var images = document.querySelectorAll(".certificate-card img");
+      images.forEach((img) => {
+        img.addEventListener("click", function () {
+          modal.style.display = "block";
+          modalImg.src = this.src; // ambil src gambar
+        });
+      });
+
+      // Tutup modal
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // Klik luar modal untuk close
+      modal.onclick = function (e) {
+        if (e.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Tahun otomatis di footer
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <!-- ----------------------------------------------------------------------------- -->
+
+    <script>
+      const cards = document.querySelectorAll(".project-card");
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transition = "all 0.05s ease-out";
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.style.transition =
+            "all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
+          card.style.transform =
+            "perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)";
+        });
+
+        card.addEventListener("mousemove", (e) => {
+          if (!isLoaded) return;
+
+          const cardRect = card.getBoundingClientRect();
+          const cardCenterX = cardRect.left + cardRect.width / 2;
+          const cardCenterY = cardRect.top + cardRect.height / 2;
+
+          const deltaX = e.clientX - cardCenterX;
+          const deltaY = e.clientY - cardCenterY;
+
+          const rotateX = (deltaY / cardRect.height) * -15;
+          const rotateY = (deltaX / cardRect.width) * 15;
+
+          const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+          const maxDistance =
+            Math.sqrt(
+              cardRect.width * cardRect.width +
+                cardRect.height * cardRect.height
+            ) / 2;
+          const proximity = 1 - Math.min(distance / maxDistance, 1);
+
+          const scale = 1 + proximity * 0.05;
+          const translateZ = proximity * 20;
+
+          card.style.transform = `
+                        perspective(1000px) 
+                        rotateX(${rotateX}deg) 
+                        rotateY(${rotateY}deg) 
+                        translateZ(${translateZ}px) 
+                        scale(${scale})
+                    `;
+        });
+      });
+    </script>
+  </body>
+</html>
